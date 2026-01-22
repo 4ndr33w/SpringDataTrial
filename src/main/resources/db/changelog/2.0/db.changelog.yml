@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: alter-employees-add-email-password.sql
+      relativeToChangelogFile: true
+  - include:
+      file: update-employee-emails.sql
+      relativeToChangelogFile: true
+  - include:
+      file: alter-employees-add-email-unique-constraint.sql
+      relativeToChangelogFile: true

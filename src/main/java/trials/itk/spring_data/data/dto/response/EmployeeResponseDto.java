@@ -7,12 +7,13 @@ import java.util.UUID;
 
 /**
  * @author 4ndr33w
- * @version 1.0
+ * @version 1.1
  */
 public record EmployeeResponseDto(
 		UUID id,
 		String firstName,
 		String lastName,
+		String email,
 		EmployeePosition position,
 		BigDecimal salary,
 		UUID departmentId

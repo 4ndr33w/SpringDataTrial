@@ -20,7 +20,7 @@ import java.util.UUID;
 
 /**
  * @author 4ndr33w
- * @version 1.0
+ * @version 1.1
  */
 @Getter
 @Setter
@@ -36,6 +36,8 @@ public class Employee {
 	private UUID id;
 	private String firstName;
 	private String lastName;
+	private String email;
+	private String password;
 	private EmployeePosition position;
 	private BigDecimal salary;
 	@ManyToOne(fetch = FetchType.EAGER)

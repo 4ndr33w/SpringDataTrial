@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /**
  * @author 4ndr33w
- * @version 1.0
+ * @version 1.1
  */
 @Slf4j
 @RestControllerAdvice
@@ -70,7 +70,7 @@ public class GlobalExceptionHandler {
 		});
 		errors.put("timestamp", ZonedDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")));
 		log.error("ERROR: Сработало исключение: {}; {}", e.getClass(), e.getMessage());
-		return ResponseEntity.badRequest().body(errors);
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
 	}
 	
 	@ExceptionHandler(ConstraintViolationException.class)

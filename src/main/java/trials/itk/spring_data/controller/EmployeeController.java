@@ -16,7 +16,7 @@ import java.util.UUID;
 
 /**
  * @author 4ndr33w
- * @version 1.0
+ * @version 1.1
  */
 @RequestMapping("/api/v1/employees")
 public interface EmployeeController {
@@ -38,4 +38,7 @@ public interface EmployeeController {
 	
 	@GetMapping
 	ResponseEntity<List<EmployeeResponseDto>> getAll();
+	
+	@GetMapping("/home")
+	ResponseEntity<String> home();
 }
