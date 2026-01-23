@@ -15,7 +15,7 @@ import java.util.UUID;
 
 /**
  * @author 4ndr33w
- * @version 1.0
+ * @version 1.1
  */
 @RestController
 @RequiredArgsConstructor
@@ -45,11 +45,17 @@ public class EmployeeControllerImpl implements EmployeeController {
 	
 	@Override
 	public ResponseEntity<Void> delete(UUID id) {
+		employeeService.delete(id); // упустил этот момент в прошлой задаче
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 	
 	@Override
 	public ResponseEntity<List<EmployeeResponseDto>> getAll() {
 		return ResponseEntity.status(HttpStatus.OK).body(employeeService.getAll());
+	}
+	
+	@Override
+	public ResponseEntity<String> home() {
+		return ResponseEntity.status(HttpStatus.OK).body("Welcome Home, User!");
 	}
 }
