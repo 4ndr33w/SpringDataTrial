@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: uuid-ossp.sql
+      relativeToChangelogFile: true
+  - include:
+      file: departments.sql
+      relativeToChangelogFile: true
+  - include:
+      file: employees.sql
+      relativeToChangelogFile: true
